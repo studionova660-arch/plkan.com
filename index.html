@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>פלקן סוככים | פתרונות הצללה מתקדמים</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Rubik', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        .text-brand {
+            color: #1e3a8a;
+        }
+        .bg-brand {
+            background-color: #1e3a8a;
+        }
+        .hover-bg-brand:hover {
+            background-color: #172554;
+        }
+        .typing-dot {
+            animation: typing 1.4s infinite ease-in-out both;
+        }
+        .typing-dot:nth-child(1) { animation-delay: -0.32s; }
+        .typing-dot:nth-child(2) { animation-delay: -0.16s; }
+        @keyframes typing {
+            0%, 80%, 100% { transform: scale(0); }
+            40% { transform: scale(1); }
+        }
+        /* Hide scrollbar for gallery */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        /* WhatsApp Button Animation */
+        .whatsapp-pulse {
+            animation: pulse-green 2s infinite;
+        }
+        @keyframes pulse-green {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://katzr.net/417cd2" target="_blank" class="fixed bottom-6 left-6 z-50 bg-[#25D366] text-white p-4 rounded-full shadow-2xl hover:bg-[#20bd5a] transition-all transform hover:scale-110 whatsapp-pulse flex items-center gap-2 group">
+        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+        <span class="hidden group-hover:block font-bold">דבר איתנו</span>
+    </a>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm fixed w-full z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2">
+                        <img src="https://static.wixstatic.com/media/8e0487_93b7517c22fd42d8b6afbe54725c5bab~mv2.png/v1/fill/w_110,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e0487_93b7517c22fd42d8b6afbe54725c5bab~mv2.png" alt="לוגו פלקן סוככים" class="h-12 w-auto">
+                        <span class="text-2xl font-bold text-gray-800">פלקן <span class="text-brand">סוככים</span></span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 space-x-reverse">
+                    <a href="#home" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">ראשי</a>
+                    <a href="#features" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">יתרונות</a>
+                    <a href="#projects" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">קטלוג</a>
+                    <a href="#testimonials-featured" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition font-bold text-blue-600">לקוחות ממליצים ✨</a>
+                    <a href="#ai-consultant" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">צ'אט יועץ</a>
+                    <a href="#contact" class="text-gray-600 hover:text-brand px-3 py-2 rounded-md text-sm font-medium transition">צור קשר</a>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-brand text-white px-5 py-2 rounded-full text-sm font-medium hover-bg-brand transition shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">קבל הצעת מחיר</a>
+                </div>
+                <div class="-ml-2 flex md:hidden">
+                    <button type="button" onclick="toggleMenu()" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-right">
+                <a href="#home" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">ראשי</a>
+                <a href="#features" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">יתרונות</a>
+                <a href="#projects" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">קטלוג</a>
+                <a href="#testimonials-featured" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50 font-bold text-blue-600">לקוחות ממליצים ✨</a>
+                <a href="#ai-consultant" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium border-b border-gray-50">צ'אט יועץ</a>
+                <a href="#contact" class="text-gray-700 hover:text-brand block px-3 py-3 rounded-md text-base font-medium">צור קשר</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="lg:grid lg:grid-cols-12 lg:gap-8 items-center">
+                <div class="text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-right">
+                    <h1 class="text-4xl tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl">
+                        <span class="block xl:inline">ההגנה המושלמת לרכב שלך</span>
+                        <span class="block text-brand xl:inline">בכל מזג אוויר</span>
+                    </h1>
+                    <p class="mt-3 text-base text-gray-500 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
+                        סוככים ממתכת חזקה בציפוי איכותי וגג פוליקרבונט. מראה מודרני, הגנה מלאה משמש וגשם, ועמידות לאורך שנים ללא תחזוקה.
+                    </p>
+                    <div class="mt-8 flex flex-col sm:flex-row sm:justify-center lg:justify-start gap-4">
+                        <div class="rounded-md shadow">
+                            <a href="https://katzr.net/417cd2" target="_blank" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover-bg-brand md:py-4 md:text-lg md:px-10 transition">
+                                הזמן עכשיו
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#projects" class="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-brand bg-blue-50 hover:bg-blue-100 md:py-4 md:text-lg md:px-10 transition">
+                                צפה בעבודות
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-12 relative sm:max-w-lg sm:mx-auto lg:mt-0 lg:max-w-none lg:mx-0 lg:col-span-6 lg:flex lg:items-center">
+                    <div class="relative mx-auto w-full rounded-lg shadow-lg lg:max-w-md overflow-hidden">
+                        <!-- Hero Image - Updated -->
+                        <img src="WhatsApp Image 2025-08-26 at 22.20_edited.jpg" 
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x500/1e3a8a/ffffff?text=פלקן+סוככים';" 
+                             alt="עומר סוככים - עבודה ראשית" 
+                             class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-base font-semibold text-brand tracking-wide uppercase">למה לבחור בנו?</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    סוכך חזק... נוחות שנשארת
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    אנחנו מאמינים שאיכות נמדדת בפרטים הקטנים. הפתרונות שלנו משלבים חוזק מבני עם אסתטיקה נקייה.
+                </p>
+            </div>
+             <div class="mt-10">
+                <div class="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-3">
+                    <!-- Feature 1 -->
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand text-white mb-5">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">חומרים איכותיים</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            מבנה מתכת חזק בציפוי מיוחד וגג פוליקרבונט שקוף ועמיד, המכניס אור טבעי אך חוסם קרינה.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand text-white mb-5">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">עמידות לאורך שנים</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            הסוככים שלנו בנויים להחזיק מעמד בכל תנאי מזג האוויר הישראלי, ללא צורך בתחזוקה מורכבת.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="flex flex-col items-center text-center p-6 bg-gray-50 rounded-lg hover:shadow-md transition duration-300">
+                        <div class="flex items-center justify-center h-12 w-12 rounded-md bg-brand text-white mb-5">
+                            <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                            </svg>
+                        </div>
+                        <h3 class="text-lg leading-6 font-medium text-gray-900">עיצוב מודרני</h3>
+                        <p class="mt-2 text-base text-gray-500">
+                            משתלב בצורה מושלמת עם חזית הבית, החניה או העסק, ומוסיף מראה יוקרתי ונקי.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects / Portfolio Carousel Section -->
+    <section id="projects" class="py-16 bg-gray-50 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-base font-semibold text-brand tracking-wide uppercase">גלריית עבודות</h2>
+                <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
+                    פרויקטים נבחרים
+                </p>
+                <p class="mt-4 max-w-2xl text-xl text-gray-500 mx-auto">
+                    החלקו לצדדים כדי לראות עוד דוגמאות לסוככים שהתקנו.
+                </p>
+            </div>
+
+            <!-- Carousel Container -->
+            <div class="relative group">
+                <!-- Buttons (Corrected Directions for RTL) -->
+                <!-- Left Button (Next in RTL means going Left visually) -->
+                <button onclick="slide('next')" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 lg:-ml-12 z-10 bg-white p-3 rounded-full shadow-lg text-brand hover:bg-gray-100 transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                </button>
+                <!-- Right Button (Prev in RTL means going Right visually) -->
+                <button onclick="slide('prev')" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-12 z-10 bg-white p-3 rounded-full shadow-lg text-brand hover:bg-gray-100 transition focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                </button>
+
+                <!-- Slider Track -->
+                <div id="slider" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth no-scrollbar">
+                    
+                    
+
+                    <!-- NEW Item 5 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0078(1).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+5';"
+                                  alt="סוכך חניה צמוד קיר" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה צמוד קיר</h3>
+                            <p class="text-gray-600 text-sm mb-4">ניצול מקסימלי של השטח הצמוד למבנה, עם תמיכה חזקה ומינימום עמודים.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 6 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0077.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+6';"
+                                  alt="סוכך חניה לבניין" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">הצללה לבנייני מגורים</h3>
+                            <p class="text-gray-600 text-sm mb-4">פתרון אסתטי ואחיד לחניות דיירים, שומר על ערך הרכבים והנכס.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 7 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0076(1).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+7';"
+                                  alt="סוכך חניה נופי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה פתוח לנוף</h3>
+                            <p class="text-gray-600 text-sm mb-4">עיצוב אוורירי שמשתלב עם הסביבה ולא חוסם את שדה הראייה.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 8 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0075(1).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+8';"
+                                  alt="קירוי כניסה וחניה" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">קירוי משולב לכניסה</h3>
+                            <p class="text-gray-600 text-sm mb-4">הגנה רציפה מהחניה ועד דלת הבית, לנוחות מקסימלית בחורף ובקיץ.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 9 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0042.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+9';"
+                                  alt="סוכך במרחב ציבורי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרונות למרחב הציבורי</h3>
+                            <p class="text-gray-600 text-sm mb-4">סוככים מסיביים ועמידים במיוחד המתאימים למוסדות ושטחים משותפים.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 10 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0040.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+10';"
+                                  alt="רצף חניות" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">מערכות הצללה מתמשכות</h3>
+                            <p class="text-gray-600 text-sm mb-4">כיסוי שטחים נרחבים בצורה אחידה ואסתטית, אידיאלי לחניונים.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 11 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0038.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+11';"
+                                  alt="סוכך בחצר פרטית" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך מעוצב לחצר</h3>
+                            <p class="text-gray-600 text-sm mb-4">משתלב בטבעיות עם גדרות אבן ועץ, ליצירת פינת חמד מוצלת.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 12 -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0037.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+12';"
+                                  alt="חניה לרכב בודד" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון קומפקטי לרכב</h3>
+                            <p class="text-gray-600 text-sm mb-4">סוכך מותאם אישית לחניות צרות, להגנה מקסימלית במינימום הפרעה.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 13 (Variant) -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0085(2).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+13';"
+                                  alt="פרויקט נוסף" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון הצללה מתקדם</h3>
+                            <p class="text-gray-600 text-sm mb-4">שילוב של פונקציונליות ועיצוב להגנה אופטימלית.</p>
+                        </div>
+                    </div>
+
+                    <!-- NEW Item 14 (Variant) -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0040 (1).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+14';"
+                                  alt="פרויקט נוסף" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון הצללה לחניון</h3>
+                            <p class="text-gray-600 text-sm mb-4">מערכת הצללה מתקדמת לחניונים ושטחים נרחבים.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <a href="#contact" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-brand bg-blue-50 hover:bg-blue-100 transition">
+                    לתיאום פגישת ייעוץ חינם
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEW FEATURE: Featured Testimonials (Replaces AI Matcher) -->
+    <section id="testimonials-featured" class="py-16 bg-gradient-to-r from-blue-900 to-indigo-900 text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 rounded-full bg-blue-800 opacity-20"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-indigo-700 opacity-20"></div>
+
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-12">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-blue-900 uppercase bg-yellow-400 rounded-full mb-3 shadow-lg">בלעדי לפלקן</span>
+                <h2 class="text-3xl font-extrabold sm:text-4xl mb-4">
+                    אלפי לקוחות מרוצים לא טועים
+                </h2>
+                <p class="text-xl text-blue-100 max-w-2xl mx-auto">
+                    הצטרפו למשפחת פלקן וגלו למה אנחנו הבחירה מספר 1 של בעלי בתים ועסקים בצפון.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Testimonial 1 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-lg italic mb-4 text-blue-50">"השירות של עומר וצוות פלקן היה יוצא דופן. הסוכך שהתקינו לנו במרפסת שינה את כל חווית האירוח שלנו. הכל עומד יציב גם ברוחות חזקות. ממליצים בחום!"</p>
+                    <div class="flex items-center">
+                        <div class="h-10 w-10 rounded-full bg-blue-500 flex items-center justify-center font-bold text-white text-lg">ד</div>
+                        <div class="mr-3">
+                            <span class="block font-bold">דניאל כהן</span>
+                            <span class="text-sm text-blue-200">חיפה</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-lg italic mb-4 text-blue-50">"חיפשנו פתרון הצללה לחניה וקיבלנו מענה מקצועי ומהיר. הסוכך עמיד ואיכותי, עבר את החורף האחרון כמו גדול. תמורה מלאה למחיר."</p>
+                    <div class="flex items-center">
+                        <div class="h-10 w-10 rounded-full bg-indigo-500 flex items-center justify-center font-bold text-white text-lg">מ</div>
+                        <div class="mr-3">
+                            <span class="block font-bold">משפחת לוי</span>
+                            <span class="text-sm text-blue-200">נצרת</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition duration-300 md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <div class="text-yellow-400 flex">
+                            ★★★★★
+                        </div>
+                    </div>
+                    <p class="text-lg italic mb-4 text-blue-50">"מקצוענות, אמינות ומחיר הוגן. פלקן סוככים הם הכתובת לכל מי שרוצה ראש שקט. העבודה בוצעה במהירות ובניקיון מופתי. תודה רבה על השירות האדיב!"</p>
+                    <div class="flex items-center justify-center md:justify-start">
+                        <div class="h-10 w-10 rounded-full bg-purple-500 flex items-center justify-center font-bold text-white text-lg">ש</div>
+                        <div class="mr-3 text-right">
+                            <span class="block font-bold">שרון אברג'יל</span>
+                            <span class="text-sm text-blue-200">עפולה</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-10 text-center">
+                <a href="https://katzr.net/417cd2" target="_blank" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-lg font-bold rounded-full text-blue-900 bg-white hover:bg-blue-50 shadow-lg transition transform hover:-translate-y-1">
+                    הצטרפו גם אתם להצלחה
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chat Consultant -->
+    <section id="ai-consultant" class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <span class="inline-block px-3 py-1 text-xs font-semibold tracking-wider text-white uppercase bg-gray-400 rounded-full mb-2">יש לכם עוד שאלות?</span>
+                <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                    צ'אט עם יועץ וירטואלי
+                </h2>
+                <p class="mt-4 text-lg text-gray-500">
+                    שאלו כל שאלה נוספת שיש לכם וקבלו תשובה מיידית.
+                </p>
+            </div>
+            <div class="bg-gray-50 rounded-2xl p-6 shadow-inner border border-gray-200">
+                <div id="chat-history" class="text-right min-h-[100px] mb-4 space-y-4 max-h-60 overflow-y-auto">
+                    <div class="bg-white p-4 rounded-lg rounded-tr-none shadow-sm inline-block max-w-[85%] border border-gray-100">
+                        <p class="text-gray-800 font-medium">שלום! אני כאן לכל שאלה נוספת.</p>
+                    </div>
+                </div>
+                <div id="loading-indicator" class="hidden text-right mb-4">
+                    <div class="bg-white p-3 rounded-lg rounded-tr-none shadow-sm inline-block border border-gray-100">
+                        <div class="flex space-x-1 space-x-reverse items-center h-4">
+                            <div class="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
+                            <div class="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
+                            <div class="w-2 h-2 bg-gray-400 rounded-full typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col sm:flex-row gap-3">
+                    <input type="text" id="user-input" 
+                        class="flex-1 appearance-none border border-gray-300 rounded-md py-3 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent text-right"
+                        placeholder="למשל: כמה זמן אחריות יש?"
+                        onkeypress="handleKeyPress(event)">
+                    <button onclick="askGemini()" 
+                        class="inline-flex justify-center items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-brand hover-bg-brand focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand shadow-lg transition">
+                        שלח
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="py-16 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-extrabold sm:text-4xl">השאירו פרטים וקבלו הצעת מחיר</h2>
+            <p class="mt-4 text-lg text-indigo-100">יועץ מקצועי יחזור אליכם בהקדם עם כל הפרטים.</p>
+            <form class="mt-8 max-w-lg mx-auto bg-white p-6 rounded-lg shadow-xl" onsubmit="handleForm(event)">
+                <div class="space-y-4">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 text-right">שם מלא</label>
+                        <input type="text" id="name" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand focus:border-brand text-gray-900" placeholder="ישראל ישראלי">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 text-right">טלפון</label>
+                        <input type="tel" id="phone" required class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand focus:border-brand text-gray-900" placeholder="050-0000000">
+                    </div>
+                    <div>
+                        <label for="address" class="block text-sm font-medium text-gray-700 text-right">כתובת התקנה (עיר/יישוב)</label>
+                        <input type="text" id="address" class="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-brand focus:border-brand text-gray-900" placeholder="">
+                    </div>
+                    <div>
+                        <button type="submit" class="w-full flex justify-center py-3 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-brand hover-bg-brand focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand transition">
+                            שריון שיחת ייעוץ
+                        
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-4 md:mb-0">
+                <div class="flex items-center gap-2 mb-2">
+                    <img src="https://static.wixstatic.com/media/8e0487_93b7517c22fd42d8b6afbe54725c5bab~mv2.png/v1/fill/w_110,h_111,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/8e0487_93b7517c22fd42d8b6afbe54725c5bab~mv2.png" alt="לוגו פלקן סוככים" class="h-8 w-auto">
+                    <span class="text-2xl font-bold">פלקן סוככים</span>
+                </div>
+                <p class="text-gray-400 text-sm">© 2024 כל הזכויות שמורות. איכות, אמינות ושירות.</p>
+            </div>
+            <div class="flex space-x-6 space-x-reverse">
+                <a href="https://www.facebook.com/share/1AZm2KyoQ1/" target="_blank" class="text-gray-400 hover:text-white transition">פייסבוק</a>
+                <a href="https://katzr.net/417cd2" target="_blank" class="text-gray-400 hover:text-white transition">וואטסאפ</a>
+                <a href="https://katzr.net/417cd2" target="_blank" class="text-[#25D366] hover:text-green-400 transition flex items-center gap-1">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.008-.57-.008-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    ווטסאפ
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+
+        function handleForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const address = document.getElementById('address').value;
+
+            // تجهيز الرسالة (اختياري، يعتمد على ما إذا كان الرابط يدعم النص)
+            // const text = `שלום, אשמח לתיאום פגישת ייעוץ.\nשם: ${name}\nטלפון: ${phone}\nכתובת: ${address}`;
+            // const encodedText = encodeURIComponent(text);
+
+            // فتح رابط الواتساب مباشرة
+            window.open('https://katzr.net/417cd2', '_blank');
+            
+            e.target.reset();
+        }
+
+        // Slider Logic (Corrected for RTL)
+        function slide(direction) {
+            const slider = document.getElementById('slider');
+            const scrollAmount = 350; 
+            
+            if (direction === 'next') {
+                // Moving Next in RTL means scrolling to the LEFT (negative X)
+                slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+            } else {
+                // Moving Prev means scrolling to the RIGHT (positive X)
+                slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+            }
+        }
+
+        const apiKey = ""; // System provides this at runtime
+
+        async function askGemini() {
+            const inputField = document.getElementById('user-input');
+            const chatHistory = document.getElementById('chat-history');
+            const loadingIndicator = document.getElementById('loading-indicator');
+            const userText = inputField.value.trim();
+
+            if (!userText) return;
+
+            const userMsgDiv = document.createElement('div');
+            userMsgDiv.className = 'bg-blue-50 p-4 rounded-lg rounded-tl-none shadow-sm inline-block max-w-[85%] text-right self-end mb-4 border border-blue-100';
+            userMsgDiv.innerText = userText;
+            chatHistory.appendChild(userMsgDiv); 
+            
+            inputField.value = '';
+            loadingIndicator.classList.remove('hidden');
+
+            const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+            const systemPrompt = "אתה יועץ מומחה של חברת 'פלקן סוככים'. ענה בעברית, קצר ולעניין.";
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: systemPrompt + "\n\nשאלה: " + userText }]
+                }]
+            };
+
+            try {
+                const response = await fetch(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+                const data = await response.json();
+                const aiResponseText = data.candidates?.[0]?.content?.parts?.[0]?.text || "סליחה, נסה שוב.";
+
+                loadingIndicator.classList.add('hidden');
+
+                const botMsgDiv = document.createElement('div');
+                botMsgDiv.className = 'bg-white p-4 rounded-lg rounded-tr-none shadow-sm inline-block max-w-[85%] border border-gray-100 text-right block mb-4';
+                botMsgDiv.innerHTML = aiResponseText.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+                chatHistory.appendChild(botMsgDiv);
+                chatHistory.scrollTop = chatHistory.scrollHeight;
+
+            } catch (error) {
+                console.error('Error:', error);
+                loadingIndicator.classList.add('hidden');
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') askGemini();
+        }
+    </script>
+</body>
+</html>
