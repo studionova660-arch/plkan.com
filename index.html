@@ -197,7 +197,7 @@
         </div>
     </section>
 
-    <!-- Projects / Portfolio Carousel Section -->
+    <!-- Projects / Portfolio Carousel Section (RESTORED) -->
     <section id="projects" class="py-16 bg-gray-50 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -213,11 +213,9 @@
             <!-- Carousel Container -->
             <div class="relative group">
                 <!-- Buttons (Corrected Directions for RTL) -->
-                <!-- Left Button (Next in RTL means going Left visually) -->
                 <button onclick="slide('next')" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 lg:-ml-12 z-10 bg-white p-3 rounded-full shadow-lg text-brand hover:bg-gray-100 transition focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
                 </button>
-                <!-- Right Button (Prev in RTL means going Right visually) -->
                 <button onclick="slide('prev')" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 lg:-mr-12 z-10 bg-white p-3 rounded-full shadow-lg text-brand hover:bg-gray-100 transition focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
                 </button>
@@ -225,135 +223,211 @@
                 <!-- Slider Track -->
                 <div id="slider" class="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory scroll-smooth no-scrollbar">
                     
-                    
-
-                    <!-- NEW Item 5 -->
+                    <!-- 1. Decorative White Carport with Fence -->
                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
                         <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0078(1).jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+5';"
-                                  alt="סוכך חניה צמוד קיר" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                             <img src="WhatsApp Image 2026-02-08 at 12.53.22 (2).jpeg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+דקורטיבי';"
+                                  alt="סוכך חניה דקורטיבי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה צמוד קיר</h3>
-                            <p class="text-gray-600 text-sm mb-4">ניצול מקסימלי של השטח הצמוד למבנה, עם תמיכה חזקה ומינימום עמודים.</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה דקורטיבי</h3>
+                            <p class="text-gray-600 text-sm mb-4">שילוב אלגנטי של אלומיניום וקירוי איכותי, משתלב מושלם עם הגדר ההיקפית.</p>
                         </div>
                     </div>
 
-                    <!-- NEW Item 6 -->
+                    <!-- 2. Curved Patio Cover -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="WhatsApp Image 2026-02-08 at 12.53.22.jpeg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=קירוי+פטיו';"
+                                  alt="קירוי פטיו מעוצב" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">קירוי פטיו מעוצב</h3>
+                            <p class="text-gray-600 text-sm mb-4">סוכך מעוגל צמוד קיר, יוצר פינת ישיבה מוצלת ונעימה בגינה.</p>
+                        </div>
+                    </div>
+
+                    <!-- 3. High Balcony Pergola -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="WhatsApp Image 2026-02-08 at 12.53.23.jpeg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרגולה+למרפסת';"
+                                  alt="פרגולה למרפסת שמש" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פרגולה למרפסת שמש</h3>
+                            <p class="text-gray-600 text-sm mb-4">קירוי גבוה ומאוורר המאפשר כניסת אור ומרחב מקסימלי במרפסת.</p>
+                        </div>
+                    </div>
+
+                    <!-- 5. Shared Building Carport -->
                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
                         <div class="h-64 bg-gray-200 overflow-hidden relative">
                              <img src="IMG-20260123-WA0077.jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+6';"
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+לבניין';"
                                   alt="סוכך חניה לבניין" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
                         </div>
                         <div class="p-6">
                             <h3 class="text-lg font-bold text-gray-900 mb-2">הצללה לבנייני מגורים</h3>
-                            <p class="text-gray-600 text-sm mb-4">פתרון אסתטי ואחיד לחניות דיירים, שומר על ערך הרכבים והנכס.</p>
+                            <p class="text-gray-600 text-sm mb-4">פתרון אחיד ואסתטי לחניות דיירים בבניין משותף.</p>
                         </div>
                     </div>
 
-                    <!-- NEW Item 7 -->
+                    <!-- 6. Wall Attached Carport -->
                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
                         <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0076(1).jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+7';"
-                                  alt="סוכך חניה נופי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                             <img src="IMG-20260123-WA0078(1).jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+צמוד+קיר';"
+                                  alt="סוכך צמוד קיר" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה פתוח לנוף</h3>
-                            <p class="text-gray-600 text-sm mb-4">עיצוב אוורירי שמשתלב עם הסביבה ולא חוסם את שדה הראייה.</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך צמוד קיר</h3>
+                            <p class="text-gray-600 text-sm mb-4">ניצול חכם של המרחב בחניות צרות הצמודות למבנה.</p>
                         </div>
                     </div>
 
-                    <!-- NEW Item 8 -->
-                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                        <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0075(1).jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+8';"
-                                  alt="קירוי כניסה וחניה" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">קירוי משולב לכניסה</h3>
-                            <p class="text-gray-600 text-sm mb-4">הגנה רציפה מהחניה ועד דלת הבית, לנוחות מקסימלית בחורף ובקיץ.</p>
-                        </div>
-                    </div>
-
-                    <!-- NEW Item 9 -->
-                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                        <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0042.jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+9';"
-                                  alt="סוכך במרחב ציבורי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרונות למרחב הציבורי</h3>
-                            <p class="text-gray-600 text-sm mb-4">סוככים מסיביים ועמידים במיוחד המתאימים למוסדות ושטחים משותפים.</p>
-                        </div>
-                    </div>
-
-                    <!-- NEW Item 10 -->
-                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                        <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0040.jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+10';"
-                                  alt="רצף חניות" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">מערכות הצללה מתמשכות</h3>
-                            <p class="text-gray-600 text-sm mb-4">כיסוי שטחים נרחבים בצורה אחידה ואסתטית, אידיאלי לחניונים.</p>
-                        </div>
-                    </div>
-
-                    <!-- NEW Item 11 -->
-                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                        <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0038.jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+11';"
-                                  alt="סוכך בחצר פרטית" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך מעוצב לחצר</h3>
-                            <p class="text-gray-600 text-sm mb-4">משתלב בטבעיות עם גדרות אבן ועץ, ליצירת פינת חמד מוצלת.</p>
-                        </div>
-                    </div>
-
-                    <!-- NEW Item 12 -->
-                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
-                        <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0037.jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+12';"
-                                  alt="חניה לרכב בודד" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון קומפקטי לרכב</h3>
-                            <p class="text-gray-600 text-sm mb-4">סוכך מותאם אישית לחניות צרות, להגנה מקסימלית במינימום הפרעה.</p>
-                        </div>
-                    </div>
-
-                    <!-- NEW Item 13 (Variant) -->
+                    <!-- 7. Carport with Shed -->
                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
                         <div class="h-64 bg-gray-200 overflow-hidden relative">
                              <img src="IMG-20260123-WA0085(2).jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+13';"
-                                  alt="פרויקט נוסף" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=חניה+עם+מחסן';"
+                                  alt="סוכך משולב מחסן" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון הצללה מתקדם</h3>
-                            <p class="text-gray-600 text-sm mb-4">שילוב של פונקציונליות ועיצוב להגנה אופטימלית.</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך משולב מחסן</h3>
+                            <p class="text-gray-600 text-sm mb-4">פתרון פרקטי הכולל אזור חניה מוצל ומקום אחסון מוגן.</p>
                         </div>
                     </div>
 
-                    <!-- NEW Item 14 (Variant) -->
+                    <!-- 8. Double Red Carport -->
                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
                         <div class="h-64 bg-gray-200 overflow-hidden relative">
-                             <img src="IMG-20260123-WA0040 (1).jpg" 
-                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרויקט+14';"
-                                  alt="פרויקט נוסף" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                             <img src="WhatsApp Image 2025-08-26 at 22.20_edited.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=חניה+כפולה';"
+                                  alt="חניה כפולה" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
                         </div>
                         <div class="p-6">
-                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון הצללה לחניון</h3>
-                            <p class="text-gray-600 text-sm mb-4">מערכת הצללה מתקדמת לחניונים ושטחים נרחבים.</p>
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">חניה כפולה יוקרתית</h3>
+                            <p class="text-gray-600 text-sm mb-4">קירוי רחב ומרשים למספר רכבים, משדרג את חזית הבית.</p>
+                        </div>
+                    </div>
+
+                    <!-- 9. Grey Arched Carport -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="WhatsApp Image 2026-02-08 at 12.53.21.jpeg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סככה+קשתית';"
+                                  alt="סככה קשתית" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סככה קשתית לחניה</h3>
+                            <p class="text-gray-600 text-sm mb-4">מבנה חזק בעיצוב קשתי, עמיד בכל תנאי מזג האוויר.</p>
+                        </div>
+                    </div>
+
+                     <!-- 10. Private Carport Stone Wall -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0038.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=חניה+פרטית';"
+                                  alt="סוכך חניה פרטי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה פרטי</h3>
+                            <p class="text-gray-600 text-sm mb-4">משתלב בטבעיות עם גדרות אבן וצמחייה.</p>
+                        </div>
+                    </div>
+
+                    <!-- 12. Parking Lot Row -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0040.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=רצף+חניות';"
+                                  alt="הצללה לחניון" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">מערכות הצללה לחניונים</h3>
+                            <p class="text-gray-600 text-sm mb-4">פתרון מודולרי לכיסוי שטחי חניה נרחבים בצורה אסתטית.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 14. Public Garden Carport -->
+                     <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="1000434640.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+לגינה';"
+                                  alt="סוכך לגינה ציבורית" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">הצללה לגינות ציבוריות</h3>
+                            <p class="text-gray-600 text-sm mb-4">סוככים עמידים במיוחד המותאמים לפארקים וגני משחקים.</p>
+                        </div>
+                    </div>
+
+                    <!-- 15. Single Compact Carport -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0037.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+יחיד';"
+                                  alt="סוכך חניה יחיד" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך יחיד קומפקטי</h3>
+                            <p class="text-gray-600 text-sm mb-4">פתרון אידיאלי לחניה בודדת, חסכוני במקום ואסתטי.</p>
+                        </div>
+                    </div>
+
+                    <!-- 16. Another White Pergola (High) -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="WhatsApp Image 2026-02-08 at 12.53.23 (1).jpeg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=פרגולה+גבוהה';"
+                                  alt="פרגולה למרפסת גג" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">קירוי למרפסות גג</h3>
+                            <p class="text-gray-600 text-sm mb-4">הצללה מושלמת לגגות ופנטהאוזים, עמידה בפני רוחות חזקות.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- 17. Another Public Carport -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="IMG-20260123-WA0042.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+ציבורי+נוסף';"
+                                  alt="סככה במרחב אורבני" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרונות הצללה לעיריות</h3>
+                            <p class="text-gray-600 text-sm mb-4">הקמת סוככים רחבי ידיים למרכזים קהילתיים ומוסדות חינוך.</p>
+                        </div>
+                    </div>
+
+                    <!-- 18. New Institutional Carport (Flag) -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="1000434643.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=חניה+מוסדית';"
+                                  alt="חניה מוסדית רחבה" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">פתרון הצללה רחב</h3>
+                            <p class="text-gray-600 text-sm mb-4">כיסוי שטח נרחב לחניות מרובות, מספק הגנה מקסימלית לרכבים.</p>
+                        </div>
+                    </div>
+
+                    <!-- 19. New Arched Carport near stairs -->
+                    <div class="min-w-[85%] md:min-w-[45%] lg:min-w-[32%] snap-center group/card bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition duration-300">
+                        <div class="h-64 bg-gray-200 overflow-hidden relative">
+                             <img src="1000434641.jpg" 
+                                  onerror="this.onerror=null; this.src='https://placehold.co/600x400/1e3a8a/ffffff?text=סוכך+קשתי';"
+                                  alt="סוכך חניה קשתי" class="w-full h-full object-cover transform group-hover/card:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-lg font-bold text-gray-900 mb-2">סוכך חניה קשתי</h3>
+                            <p class="text-gray-600 text-sm mb-4">עיצוב אוורירי וזורם, המשתלב בהרמוניה עם הסביבה והצמחייה.</p>
                         </div>
                     </div>
 
